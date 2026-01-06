@@ -1,0 +1,336 @@
+/**
+ * Events Manager Custom Display - Styles
+ * Version: 1.0.0
+ */
+
+.emcd-events-container {
+    width: 100%;
+    overflow: hidden !important;
+    margin: 20px 0 !important;
+    position: relative !important;
+}
+
+.emcd-events-scroll {
+    display: flex !important;
+    gap: 20px !important;
+    overflow-x: auto !important; 
+    overflow-y: hidden !important;
+    padding: 15px 0 !important;
+    scroll-behavior: smooth !important;
+    cursor: grab !important;
+    user-select: none !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+.emcd-events-scroll:active {
+    cursor: grabbing !important;
+}
+
+.emcd-events-scroll::-webkit-scrollbar {
+    height: 6px !important;
+}
+
+.emcd-events-scroll::-webkit-scrollbar-track {
+    background: #f0f0f0 !important;
+    border-radius: 3px !important;
+}
+
+.emcd-events-scroll::-webkit-scrollbar-thumb {
+    background: #13d2cd !important;
+    border-radius: 3px !important;
+}
+
+.emcd-events-scroll::-webkit-scrollbar-thumb:hover {
+    background: #10b5b0 !important;
+}
+
+.emcd-event-card {
+    min-width: 300px !important;
+    max-width: 300px !important;
+    width: 300px !important;
+    background: #ffffff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    cursor: pointer !important;
+    border: 1px solid #e9ecef !important;
+}
+
+.emcd-event-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+.emcd-event-date {
+    background: #13d2cd !important;
+    color: white !important;
+    padding: 10px 15px !important;
+    position: relative !important;
+    min-height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.emcd-date-content {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.emcd-event-day {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+}
+
+.emcd-event-month {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin: 0 !important;
+}
+
+.emcd-event-content {
+    padding: 20px !important;
+    background: #f8f9fa !important;
+    min-height: 120px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+}
+
+.emcd-event-title {
+    margin: 0 0 10px 0 !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    color: #495057 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px !important;
+}
+
+.emcd-event-excerpt {
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    color: #6c757d !important;
+    flex-grow: 1 !important;
+}
+
+.em-no-events {
+    text-align: center !important;
+    padding: 60px 20px !important;
+    font-style: italic !important;
+    color: #6c757d !important;
+    font-size: 16px;
+}
+
+/* Drag and scroll functionality */
+.emcd-events-scroll {
+    scroll-snap-type: x mandatory !important;
+}
+
+.emcd-event-card {
+    scroll-snap-align: start !important;
+}
+
+/* Enhanced mobile scrolling */
+@media (hover: none) and (pointer: coarse) {
+    .emcd-events-scroll {
+        -webkit-overflow-scrolling: touch !important;
+        scroll-behavior: smooth !important;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .emcd-events-scroll {
+        gap: 16px !important;
+    }
+    
+    .emcd-event-card {
+        min-width: 280px !important;
+        max-width: 280px !important;
+        width: 280px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .emcd-events-container {
+        margin: 15px 0 !important;
+    }
+    
+    .emcd-events-scroll {
+        gap: 14px !important;
+        padding: 10px 0 !important;
+    }
+    
+    .emcd-event-card {
+        min-width: 260px !important;
+        max-width: 260px !important;
+        width: 260px !important;
+    }
+    
+    .emcd-event-content {
+        padding: 18px !important;
+        min-height: 110px !important;
+    }
+    
+    .emcd-event-title {
+        font-size: 15px !important;
+    }
+    
+    .emcd-event-excerpt {
+        font-size: 12px !important;
+    }
+    
+    .emcd-event-day {
+        font-size: 16px !important;
+    }
+    
+    .emcd-event-month {
+        font-size: 11px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .emcd-events-scroll {
+        gap: 12px !important;
+    }
+    
+    .emcd-event-card {
+        min-width: 240px !important;
+        max-width: 240px !important;
+        width: 240px !important;
+    }
+    
+    .emcd-event-content {
+        padding: 16px !important;
+        min-height: 100px !important;
+    }
+    
+    .emcd-event-date {
+        padding: 8px 12px !important;
+        min-height: 35px !important;
+    }
+    
+    .emcd-date-content {
+        gap: 6px !important;
+    }
+    
+    .emcd-event-day {
+        font-size: 15px !important;
+    }
+    
+    .emcd-event-month {
+        font-size: 10px !important;
+    }
+    
+    .emcd-event-title {
+        font-size: 14px !important;
+    }
+    
+    .emcd-event-excerpt {
+        font-size: 11px !important;
+    }
+}
+
+/* Force horizontal layout */
+.emcd-events-container * {
+    box-sizing: border-box !important;
+}
+
+.emcd-events-scroll {
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+}
+
+.emcd-event-card {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+}
+
+/* RTL Support */
+.rtl .emcd-events-scroll {
+    direction: rtl !important;
+}
+
+.rtl .emcd-event-card {
+    direction: ltr !important;
+}
+
+/* Accessibility improvements */
+.emcd-event-card:focus {
+    outline: 2px solid #13d2cd !important;
+    outline-offset: 2px !important;
+}
+
+.emcd-event-card:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
+.emcd-event-card:focus-visible {
+    outline: 2px solid #13d2cd !important;
+    outline-offset: 2px !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .emcd-event-card {
+        transition: none !important;
+    }
+    
+    .emcd-events-scroll {
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .emcd-event-card {
+        border: 2px solid #000 !important;
+    }
+    
+    .emcd-event-date {
+        border-bottom: 2px solid #000 !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .emcd-events-container {
+        overflow: visible !important;
+    }
+    
+    .emcd-events-scroll {
+        display: block !important;
+        overflow: visible !important;
+    }
+    
+    .emcd-event-card {
+        display: block !important;
+        margin-bottom: 20px !important;
+        break-inside: avoid !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-width: auto !important;
+    }
+}
+.emcd-event-card-link {
+    text-decoration: none !important;
+    color: inherit !important;
+    display: block !important;
+}
+
+.emcd-event-card-link:hover {
+    text-decoration: none !important;
+}
+
+.emcd-event-card-link:focus {
+    outline: 2px solid #13d2cd !important;
+    outline-offset: 2px !important;
+}
